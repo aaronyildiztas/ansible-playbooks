@@ -29,15 +29,15 @@
     when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "6")
     shell: "r1soft-setup --get-key http://backup.acirrustech.com/" 
 
+  
   handlers: 
-    name: AGENT_RESTART
-    service: 
-      name: cdp-agent 
-      state: restarted
-      enabled: true
+    - name: AGENT_RESTART
+      service: 
+        name: cdp-agent 
+        state: restarted
+        enabled: true
 
   
-
 
 
 
